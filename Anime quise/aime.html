@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090714">
+    <title>AnimeVerse | Anime Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <main class="app">
+        <header class="topbar">
+            <a class="brand" href="#" aria-label="AnimeVerse home">
+                <span class="brand-icon">✦</span>
+                ANIME<span>VERSE</span>
+            </a>
+            <span class="badge">TRIVIA CHALLENGE</span>
+        </header>
+
+        <!-- Welcome screen -->
+        <section id="welcome-screen" class="screen welcome-screen">
+            <div class="hero-icon" aria-hidden="true">
+                <span>ア</span>
+                <span>✦</span>
+            </div>
+
+            <p class="eyebrow">WELCOME, ANIME FAN</p>
+            <h1>How well do you<br><span>know anime?</span></h1>
+            <p class="intro">
+                Test your anime knowledge, challenge yourself,
+                and see if you can become a true anime legend.
+            </p>
+
+            <div class="game-info">
+                <div>
+                    <span class="info-icon">◈</span>
+                    <strong>10</strong>
+                    <small>Questions</small>
+                </div>
+                <div>
+                    <span class="info-icon">◎</span>
+                    <strong>4</strong>
+                    <small>Choices each</small>
+                </div>
+                <div>
+                    <span class="info-icon">★</span>
+                    <strong>100</strong>
+                    <small>Max points</small>
+                </div>
+            </div>
+
+            <button id="start-btn" class="primary-btn">
+                Start Quiz <span>→</span>
+            </button>
+
+            <p class="welcome-note">NO SIGN-UP NEEDED · JUST HAVE FUN</p>
+        </section>
+
+        <!-- Quiz screen -->
+        <section id="quiz-screen" class="screen quiz-screen" hidden>
+            <div class="quiz-heading">
+                <div>
+                    <p class="eyebrow">ANIME KNOWLEDGE TEST</p>
+                    <h2>Choose your answer</h2>
+                </div>
+                <div class="question-count">
+                    <span id="question-number">01</span>
+                    <span class="count-divider">/</span>
+                    <span>10</span>
+                </div>
+            </div>
+
+            <div
+                class="progress-track"
+                role="progressbar"
+                aria-label="Quiz progress"
+                aria-valuemin="0"
+                aria-valuemax="10"
+                aria-valuenow="0"
+                id="progress-track"
+            >
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+
+            <div class="question-card">
+                <span id="question-category" class="category">
+                    GENERAL ANIME
+                </span>
+                <h3 id="question-text">Question goes here</h3>
+                <p class="choose-hint">Select one answer below</p>
+
+                <div id="answers" class="answers">
+                    <!-- Answer buttons are added by JavaScript -->
+                </div>
+
+                <p id="feedback" class="feedback" aria-live="polite"></p>
+
+                <div class="quiz-footer">
+                    <span class="score-label">
+                        YOUR SCORE <strong id="current-score">0</strong>
+                    </span>
+                    <button id="next-btn" class="primary-btn next-btn" disabled>
+                        Next Question <span>→</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results screen -->
+        <section id="result-screen" class="screen result-screen" hidden>
+            <div class="result-icon" id="result-icon">🏆</div>
+            <p class="eyebrow">QUIZ COMPLETED</p>
+            <h2 id="result-title">Anime Champion!</h2>
+            <p id="result-message" class="intro">
+                Your anime adventure is complete.
+            </p>
+
+            <div class="result-score-card">
+                <p>Nice Work Jurk</p>
+                <div class="final-score">
+                    <span id="final-score">0</span>
+                    <span class="score-total">/ 10</span>
+                </div>
+                <div class="result-progress">
+                    <div id="result-bar"></div>
+                </div>
+                <p id="result-percent" class="result-percent">0% correct</p>
+            </div>
+
+            <div class="result-stats">
+                <div>
+                    <strong id="correct-count">0</strong>
+                    <span>Correct</span>
+                </div>
+                <div>
+                    <strong id="wrong-count">0</strong>
+                    <span>Stupid You Couln't even get this right</span>
+                </div>
+            </div>
+
+            <button id="restart-btn" class="primary-btn">
+                ↻ Play Again Dumass
+            </button>
+            <p class="welcome-note">EVERY LEGEND STARTS SOMEWHERE</p>
+        </section>
+
+        <footer class="site-footer">
+            <span>✦ ANIMEVERSE</span>
+            <span>BUILT FOR ANIME FANS</span>
+        </footer>
+    </main>
+</body>
+</html>
